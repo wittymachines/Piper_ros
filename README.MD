@@ -367,3 +367,9 @@ rostopic pub /piper_description/joint1_position_controller/command std_msgs/Floa
 可以看到机械臂link1旋转了90度
 
 ![ ](./asserts/pictures/piper_gazebo_90.jpg)
+
+## Q&A
+
+1. 录joint的包后播放包，机械臂运行卡顿，并且包播放结束，机械臂还在运动(就是回调函数依旧在处理)：
+
+  将joint_callback函数中的打印注释，与电脑性能有关，性能差的电脑处理不过来，导致回调函数处理时间长
