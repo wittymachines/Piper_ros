@@ -12,3 +12,4 @@ src/piper/backup
 *.7z
 *.zip
 *.tar
+src/analytical_solution
