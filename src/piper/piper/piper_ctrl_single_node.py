@@ -165,12 +165,12 @@ class C_PiperRosNode(Node):
     def PubilsArmEndPose(self):
         # 末端位姿
         endpos = Pose()
-        endpos.position.x = self.piper.ArmEndPose.end_pose.X_axis/1000000
-        endpos.position.y = self.piper.ArmEndPose.end_pose.Y_axis/1000000
-        endpos.position.z = self.piper.ArmEndPose.end_pose.Z_axis/1000000
-        roll = self.piper.ArmEndPose.end_pose.RX_axis/1000
-        pitch = self.piper.ArmEndPose.end_pose.RY_axis/1000
-        yaw = self.piper.ArmEndPose.end_pose.RZ_axis/1000
+        endpos.position.x = self.piper.GetArmEndPoseMsgs().end_pose.X_axis/1000000
+        endpos.position.y = self.piper.GetArmEndPoseMsgs().end_pose.Y_axis/1000000
+        endpos.position.z = self.piper.GetArmEndPoseMsgs().end_pose.Z_axis/1000000
+        roll = self.piper.GetArmEndPoseMsgs().end_pose.RX_axis/1000
+        pitch = self.piper.GetArmEndPoseMsgs().end_pose.RY_axis/1000
+        yaw = self.piper.GetArmEndPoseMsgs().end_pose.RZ_axis/1000
         quaternion = R.from_euler('xyz', [roll, pitch, yaw]).as_quat()
         endpos.orientation.x = quaternion[0]
         endpos.orientation.y = quaternion[1]
