@@ -23,10 +23,10 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.5708 0 -1.5708" />
       <geometry>
         <mesh
-          filename="package://piper_description/meshes/base_link.STL" />
+          filename="package://piper_description/meshes/base_link.dae" />
       </geometry>
       <material
         name="">
@@ -63,10 +63,10 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.5708 0 0" />
       <geometry>
         <mesh
-          filename="package://piper_description/meshes/link1.STL" />
+          filename="package://piper_description/meshes/link1.dae" />
       </geometry>
       <material
         name="">
@@ -121,10 +121,10 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="0 1.5708 -0.0873" />
       <geometry>
         <mesh
-          filename="package://piper_description/meshes/link2.STL" />
+          filename="package://piper_description/meshes/link2.dae" />
       </geometry>
       <material
         name="">
@@ -179,10 +179,10 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.4835 1.5708 0" />
       <geometry>
         <mesh
-          filename="package://piper_description/meshes/link3.STL" />
+          filename="package://piper_description/meshes/link3.dae" />
       </geometry>
       <material
         name="">
@@ -237,10 +237,10 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.48 0 1.5708" />
       <geometry>
         <mesh
-          filename="package://piper_description/meshes/link4.STL" />
+          filename="package://piper_description/meshes/link4.dae" />
       </geometry>
       <material
         name="">
@@ -295,10 +295,10 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.5 1.5708 0" />
       <geometry>
         <mesh
-          filename="package://piper_description/meshes/link5.STL" />
+          filename="package://piper_description/meshes/link5.dae" />
       </geometry>
       <material
         name="">
