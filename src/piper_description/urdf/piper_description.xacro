@@ -300,7 +300,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="1.5 1.5708 0" />
+        rpy="1.4835 1.5708 0" />
       <geometry>
         <mesh
           filename="package://piper_description/meshes/link5.dae" />
