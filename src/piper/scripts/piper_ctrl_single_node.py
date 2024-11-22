@@ -11,6 +11,7 @@ from std_msgs.msg import Bool
 import time
 import threading
 import argparse
+import math
 from piper_sdk import *
 from piper_sdk import C_PiperInterface
 from piper_msgs.msg import PiperStatusMsg, PosCmd
@@ -195,6 +196,9 @@ class C_PiperRosNode():
         roll = self.piper.GetArmEndPoseMsgs().end_pose.RX_axis/1000
         pitch = self.piper.GetArmEndPoseMsgs().end_pose.RY_axis/1000
         yaw = self.piper.GetArmEndPoseMsgs().end_pose.RZ_axis/1000
+        roll = math.radians(roll)
+        pitch = math.radians(pitch)
+        yaw = math.radians(yaw)
         quaternion = quaternion_from_euler(roll, pitch, yaw)
         endpos.orientation.x = quaternion[0]
         endpos.orientation.y = quaternion[1]

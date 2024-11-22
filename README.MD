@@ -8,6 +8,20 @@
 |---|---|
 |![ros](https://img.shields.io/badge/ROS-noetic-blue.svg)|![Pass](https://img.shields.io/badge/Pass-blue.svg)|
 
+## 注意URDF版本(以零点区分)
+
+若您的机械臂,上电后使用上位机使能回零,j2、j3关节非触碰到限位位置,则为旧版零点
+
+旧版本零点以j2、j3的限位位置偏移2度得到,参
+
+带夹爪:
+
+`piper_description_v00.urdf`、`piper_description_v00.xacro`
+
+不带夹爪:
+
+`piper_no_gripper_description_v00.urdf`、`piper_no_gripper_description_v00.xacro`
+
 ## 安装方法
 
 ### 安装依赖

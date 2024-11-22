@@ -4,7 +4,6 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="piper_description">
-  <link name="dummy_root" />
   <link
     name="base_link">
     <inertial>
@@ -24,10 +23,10 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.5708 0 -1.5708" />
       <geometry>
         <mesh
-          filename="package://piper_description/meshes/base_link.STL" />
+          filename="package://piper_description/meshes/base_link.dae" />
       </geometry>
       <material
         name="">
@@ -45,11 +44,6 @@
       </geometry>
     </collision>
   </link>
-    <joint name="fixed_base" type="fixed">
-    <parent link="dummy_root" />
-    <child link="base_link" />
-    <origin xyz="0 0 0" rpy="0 0 0" />
-  </joint>
   <link
     name="link1">
     <inertial>
@@ -69,10 +63,10 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.5708 0 0" />
       <geometry>
         <mesh
-          filename="package://piper_description/meshes/link1.STL" />
+          filename="package://piper_description/meshes/link1.dae" />
       </geometry>
       <material
         name="">
@@ -127,10 +121,10 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="0 1.5708 -0.0873" />
       <geometry>
         <mesh
-          filename="package://piper_description/meshes/link2.STL" />
+          filename="package://piper_description/meshes/link2.dae" />
       </geometry>
       <material
         name="">
@@ -151,9 +145,12 @@
   <joint
     name="joint2"
     type="revolute">
+    <!-- <origin
+      xyz="0 0 0"
+      rpy="1.5708 -0.10095 -1.5708" /> -->
     <origin
       xyz="0 0 0"
-      rpy="1.5708 -0.10095 -1.5708" />
+      rpy="1.5708 -0.135857 -1.5708" />
     <parent
       link="link1" />
     <child
@@ -185,10 +182,10 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.4835 1.5708 0" />
       <geometry>
         <mesh
-          filename="package://piper_description/meshes/link3.STL" />
+          filename="package://piper_description/meshes/link3.dae" />
       </geometry>
       <material
         name="">
@@ -209,9 +206,12 @@
   <joint
     name="joint3"
     type="revolute">
+    <!-- <origin
+      xyz="0.28503 0 0"
+      rpy="0 0 1.3826" /> -->
     <origin
       xyz="0.28503 0 0"
-      rpy="0 0 1.3826" />
+      rpy="0 0 1.347693" />
     <parent
       link="link2" />
     <child
@@ -243,10 +243,10 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.48 0 1.5708" />
       <geometry>
         <mesh
-          filename="package://piper_description/meshes/link4.STL" />
+          filename="package://piper_description/meshes/link4.dae" />
       </geometry>
       <material
         name="">
@@ -301,10 +301,10 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.4835 1.5708 0" />
       <geometry>
         <mesh
-          filename="package://piper_description/meshes/link5.STL" />
+          filename="package://piper_description/meshes/link5.dae" />
       </geometry>
       <material
         name="">
@@ -339,35 +339,6 @@
       upper="1.22"
       effort="100"
       velocity="3" />
-  </joint>
-
-  <link name="link6">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <mass value="0.0001" />
-      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 -0.01" rpy="0 0 0" />
-      <geometry>
-        <box size="0.01 0.01 0.01" />  <!-- 小方块尺寸 -->
-      </geometry>
-      <material name="">
-        <color rgba="0.792 0.819 0.933 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <box size="0.01 0.01 0.01" />  <!-- 小方块尺寸 -->
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="joint6" type="fixed">
-    <origin xyz="0 0.091 0.0014165" rpy="-1.5708 -1.5708 0" />
-    <parent link="link5" />
-    <child link="link6" />
   </joint>
 
 </robot>
