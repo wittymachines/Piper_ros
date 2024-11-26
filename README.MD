@@ -10,17 +10,39 @@
 
 ## 注意URDF版本(以零点区分)
 
-若您的机械臂,上电后使用上位机使能回零,j2、j3关节非触碰到限位位置,则为旧版零点
+若您的机械臂，上电后使用上位机使能回零，j2和j3关节抬起了2度的角度，则为v00版零点，如下图:
 
-旧版本零点以j2、j3的限位位置偏移2度得到,参
+![ ](./asserts/pictures/piper_zero.png)
+
+旧版本零点以j2和j3的限位位置偏移2度得到，参照下述文件
 
 带夹爪:
 
+urdf描述文件和xacro描述文件：
+
 `piper_description_v00.urdf`、`piper_description_v00.xacro`
+
+查看：
+
+将`src/piper_description/launch/piper_with_gripper/display_urdf.launch`文件内`piper_description.urdf`改为`piper_description_v00.urdf`
+
+执行：`roslaunch piper_description display_urdf.launch`
+
+![ ](./asserts/pictures/piper_urdf_zero.png)
 
 不带夹爪:
 
+urdf描述文件和xacro描述文件：
+
 `piper_no_gripper_description_v00.urdf`、`piper_no_gripper_description_v00.xacro`
+
+查看：
+
+`src/piper_description/launch/piper_no_gripper/display_no_gripper_urdf.launch`文件内`piper_no_gripper_description.urdf`改为`piper_no_gripper_description_v00.urdf`
+
+执行：`roslaunch piper_description display_no_gripper_urdf.launch`
+
+![ ](./asserts/pictures/piper_urdf_no_gripper_zero.png)
 
 ## 安装方法
 
@@ -76,7 +98,7 @@ ps:**一般第一个插入的can模块会默认是can0，如果没有查询到ca
 bash can_activate.sh can_piper 1000000 "1-2:1.0"
 ```
 
-ps:**此处的意思是，1-2:1.0硬件编码的usb端口插入的can设备，名字被重命名为can_piper，波特率为1000000，并激活**
+ps:**此处的意思是，1-2:1.0硬件编码的usb端口插入的can设备，名字被重命名为can_piper,波特率为1000000，并激活**
 
 然后执行`ifconfig`查看是否有`can_piper`，如果有则can模块设置成功
 
@@ -214,7 +236,7 @@ effort: [0,0,0,0,0,0,0.5]"
 
   说明机械臂没有与can模块连同，拔插usb后，重新启动机械臂，再激活can模块，然后尝试重新启动节点
 
-- 如果打开 了自动使能，尝试使能5s没有成功后，会自动退出程序
+- 如果打开了自动使能，尝试使能5s没有成功后，会自动退出程序
 
 ### piper自定义消息
 
@@ -291,7 +313,7 @@ bool communication_status_joint_5//5号关节角度超限位（0：正常 1：�
 bool communication_status_joint_6//6号关节角度超限位（0：正常 1：异常）
 ```
 
-机械臂末端位姿控制，注意:有些奇异点无法到达
+机械臂末端位姿控制，注意：有些奇异点无法到达
 
 `PosCmd.msg`
 
@@ -321,15 +343,15 @@ source devel/setup.bash
 roslaunch piper_description display_xacro.launch
 ```
 
-运行后会发布`/joint_states`,可以通过`rostopic echo /joint_states` 查看
+运行后会发布`/joint_states`，可以通过`rostopic echo /joint_states` 查看
 
 ![ ](./asserts/pictures/tostopic_list.jpg)
 
 同时会弹出两个页面如下，滑动条数值对应`/joint_states`数值，拖动滑动条可以改变其数值，rviz中的模型也会随动
 
-有时候滑动条窗口没看到，看下dock栏是否有窗口，可能是被其它页面覆盖了
+有时滑动条窗口未显示，请查看下dock栏是否有窗口，可能是被其它页面覆盖了
 
-![ ](./asserts/pictures/piper_rviz.jpg)
+![ ](./asserts/pictures/piper_rviz.png)
 
 ### gazebo
 
@@ -341,7 +363,7 @@ source devel/setup.bash
 roslaunch piper_description gazebo_xacro.launch
 ```
 
-![ ](./asserts/pictures/piper_gazebo.jpg)
+![ ](./asserts/pictures/piper_gazebo.png)
 
 运行后会发布
 
@@ -380,7 +402,7 @@ rostopic pub /piper_description/joint1_position_controller/command std_msgs/Floa
 
 可以看到机械臂link1旋转了90度
 
-![ ](./asserts/pictures/piper_gazebo_90.jpg)
+![ ](./asserts/pictures/piper_gazebo_90.png)
 
 ## Q&A
 

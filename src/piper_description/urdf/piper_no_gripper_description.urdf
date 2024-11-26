@@ -11,7 +11,7 @@
         xyz="-0.00973928490005031 1.83127089286717E-06 0.0410140167677137"
         rpy="0 0 0" />
       <mass
-        value="0.0001" />
+        value="0.162352169522719" />
       <inertia
         ixx="0.000226592553127906"
         ixy="-7.33974356968615E-08"
@@ -23,7 +23,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="1.5708 0 -1.5708" />
+        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://piper_description/meshes/base_link.dae" />
@@ -51,7 +51,7 @@
         xyz="0.00131676031927021 0.000310288842008365 -0.00922874512303438"
         rpy="0 0 0" />
       <mass
-        value="0.0001" />
+        value="0.0978679932242825" />
       <inertia
         ixx="7.76684558296782E-05"
         ixy="1.09084650459916E-07"
@@ -63,7 +63,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="1.5708 0 0" />
+        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://piper_description/meshes/link1.dae" />
@@ -109,7 +109,7 @@
         xyz="0.147615838821413 -0.0174259998251394 0.00175952516190707"
         rpy="0 0 0" />
       <mass
-        value="0.0001" />
+        value="0.289571136953082" />
       <inertia
         ixx="0.000150112628108228"
         ixy="8.58974959950769E-05"
@@ -121,7 +121,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 1.5708 -0.0873" />
+        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://piper_description/meshes/link2.dae" />
@@ -167,7 +167,7 @@
         xyz="0.0156727239770991 0.104466514402189 0.000508486576356504"
         rpy="0 0 0" />
       <mass
-        value="0.0001" />
+        value="0.290583243387798" />
       <inertia
         ixx="0.00022168634302318"
         ixy="-7.57426147001315E-06"
@@ -179,7 +179,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="1.4835 1.5708 0" />
+        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://piper_description/meshes/link3.dae" />
@@ -225,7 +225,7 @@
         xyz="0.000276464622388145 -0.00102803669324856 -0.00472830700561582"
         rpy="0 0 0" />
       <mass
-        value="0.0001" />
+        value="0.127087348341362" />
       <inertia
         ixx="3.82011730423392E-05"
         ixy="-4.92358350916331E-08"
@@ -237,7 +237,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="1.48 0 1.5708" />
+        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://piper_description/meshes/link4.dae" />
@@ -283,7 +283,7 @@
         xyz="8.82262433637704E-05 0.0566829014808264 -0.00196119720482555"
         rpy="0 0 0" />
       <mass
-        value="0.0001" />
+        value="0.144711242639456" />
       <inertia
         ixx="4.39644313661978E-05"
         ixy="-3.59259686449865E-08"
@@ -295,7 +295,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="1.4835 1.5708 0" />
+        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://piper_description/meshes/link5.dae" />
